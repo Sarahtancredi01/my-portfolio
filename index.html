@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarah Ogugua Ityav | Professional Portfolio</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --bg-dark: #0A0A0A;
+            --card-bg: #161616;
+            --accent-purple: #A020F0;
+            --accent-gold: #D4AF37;
+            --text-main: #E0E0E0;
+            --text-dim: #A0A0A0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-main);
+            background-color: var(--bg-dark);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Bodoni Moda', serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(10,10,10,0.95);
+            padding: 20px 0;
+            border-bottom: 1px solid #333;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: var(--accent-gold);
+            text-decoration: none;
+            font-size: 1.4rem;
+            font-weight: bold;
+        }
+
+        .nav-links a {
+            margin-left: 25px;
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--accent-gold);
+            font-size: 2rem;
+        }
+
+        /* HERO */
+        #hero {
+            text-align: center;
+            padding: 120px 0;
+            background: radial-gradient(circle at center, #1a0033 0%, #000 100%);
+            border-bottom: 1px solid #222;
+        }
+
+        .hero-image {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 3px solid var(--accent-gold);
+            margin-bottom: 25px;
+            object-fit: cover;
+            transition: 0.4s ease;
+        }
+        
+        .hero-image:hover {
+            transform: scale(1.05);
+            border-color: var(--accent-purple);
+        }
+
+        /* GRID */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 35px;
+            border: 1px solid #222;
+            transition: 0.4s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-purple);
+            box-shadow: 0 10px 30px rgba(160, 32, 240, 0.1);
+        }
+
+        .card h3 {
+            color: #fff;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .card p {
+            color: var(--text-dim);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .project-tag {
+            color: var(--accent-purple);
+            font-size: 0.7rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        /* SKILLS */
+        .skill-tag {
+            display: inline-block;
+            margin: 5px;
+            padding: 8px 15px;
+            background: #222;
+            color: var(--accent-gold);
+            font-size: 0.75rem;
+            border: 1px solid #333;
+            font-weight: 600;
+        }
+
+        /* BUTTON */
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 14px 40px;
+            border: 1px solid var(--accent-gold);
+            color: var(--accent-gold);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: var(--accent-gold);
+            color: #000;
+        }
+
+        footer {
+            text-align: center;
+            padding: 50px;
+            border-top: 1px solid #222;
+            color: var(--text-dim);
+            font-size: 0.8rem;
+        }
+
+        .contact-info {
+            color: var(--text-main);
+            text-decoration: none;
+            display: block;
+            margin: 10px 0;
+            transition: 0.3s;
+        }
+
+        .contact-info:hover {
+            color: var(--accent-purple);
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <nav>
+            <a href="#" class="logo">S.O. ITYAV</a>
+            <div class="nav-links">
+                <a href="#about">Profile</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">History</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<section id="hero">
+    <div class="container">
+        <img src="headshot.jpeg" alt="Sarah Ogugua Ityav" class="hero-image">
+        <h1>Sarah Ogugua Ityav</h1>
+        <p style="color: var(--accent-gold); font-size: 1.2rem; margin-top: 10px; letter-spacing: 1px;">Data Engineer • Remote Operations • AI Practitioner</p>
+    </div>
+</section>
+
+<section id="about">
+    <div class="container">
+        <h2 class="section-title">Professional Summary</h2>
+        <p style="text-align:center; max-width:850px; margin:auto; color:var(--text-dim); font-size: 1.1rem;">
+            I am a Junior Data Engineer and 3MTT Fellow with a foundation in Physics and professional consultancy. 
+            I specialize in building automated ETL pipelines and applying AI solutions to solve complex logistical challenges. 
+            I am committed to delivering technical excellence while maintaining clear, professional communication between engineering teams and stakeholders.
+        </p>
+    </div>
+</section>
+
+<section id="skills" style="background-color: #0c0c0c;">
+    <div class="container">
+        <h2 class="section-title">Technical Expertise</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Data Engineering</h3>
+                <div>
+                    <div class="skill-tag">ETL Development</div>
+                    <div class="skill-tag">SQL & Python</div>
+                    <div class="skill-tag">Apache Airflow</div>
+                    <div class="skill-tag">Astro CLI</div>
+                </div>
+            </div>
+            <div class="card">
+                <h3>AI & Operations</h3>
+                <div>
+                    <div class="skill-tag">Machine Learning</div>
+                    <div class="skill-tag">API Integration</div>
+                    <div class="skill-tag">Notion Expert</div>
+                    <div class="skill-tag">Excel Specialist</div>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Remote Collaboration</h3>
+                <div>
+                    <div class="skill-tag">Slack/MS Teams</div>
+                    <div class="skill-tag">Time Management</div>
+                    <div class="skill-tag">CRM Tools</div>
+                    <div class="skill-tag">Technical Writing</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <div class="container">
+        <h2 class="section-title">Technical Pipelines</h2>
+        <div class="grid">
+            <div class="card">
+                <span class="project-tag">Engineering</span>
+                <h3>Global Tech News Data Pipeline</h3>
+                <p>Designed and built an automated ETL system using **Apache Airflow** and **Astro CLI** to extract and track global tech trends. Managed all versioning and deployment documentation via **GitHub**.</p>
+            </div>
+
+            <div class="card">
+                <span class="project-tag">Intelligence</span>
+                <h3>Automated NGR Food Price Pipeline</h3>
+                <p>Developed a custom **Python-based pipeline** for monitoring food price fluctuations in Nigeria. Automated complex data cleaning processes to transform raw market data into structured, actionable reports.</p>
+            </div>
+
+            <div class="card">
+                <span class="project-tag">Operations</span>
+                <h3>Digital Workflow Architecture</h3>
+                <p>Architected a streamlined **Notion ecosystem** for remote operations, integrating task tracking, resource documentation, and automated scheduling to improve team productivity.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="experience" style="background-color: #0c0c0c;">
+    <div class="container">
+        <h2 class="section-title">Professional History</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Financial Advisor</h3>
+                <p style="color: var(--accent-purple);">First Bank Insurance (SANLAM)</p>
+                <p style="margin-top: 10px;">Managed client portfolios and conducted strategic market research to drive business growth and revenue targets.</p>
+            </div>
+            <div class="card">
+                <h3>Executive Assistant</h3>
+                <p style="color: var(--accent-purple);">British Council / PFL Education</p>
+                <p style="margin-top: 10px;">Provided premium administrative support for international exhibition delegates and managed exhibit communications.</p>
+            </div>
+            <div class="card">
+                <h3>Procurement Assistant</h3>
+                <p style="color: var(--accent-purple);">NACA</p>
+                <p style="margin-top: 10px;">Maintained meticulous documentation and supported bid evaluation processes for large-scale capital projects.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container" style="text-align:center;">
+        <h2 class="section-title">Inquiries</h2>
+        <a href="mailto:ityavsarah@gmail.com" class="contact-info" style="font-size: 1.2rem;">ityavsarah@gmail.com</a>
+        <a href="https://linkedin.com/in/sarah-ityav-56417b57" target="_blank" class="contact-info" style="font-weight: 600;">LinkedIn: sarah-ityav-56417b57</a>
+        <a href="Sarah_CV.pdf" class="btn">Download My CV</a>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Sarah Ogugua Ityav | Data-Driven Excellence</p>
+</footer>
+
+</body>
+</html>
