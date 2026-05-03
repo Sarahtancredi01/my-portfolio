@@ -13,7 +13,6 @@
         :root {
             --bg-dark: #0A0A0A;
             --card-bg: #161616;
-            --accent-purple: #A020F0;
             --accent-gold: #D4AF37;
             --text-main: #E0E0E0;
             --text-dim: #A0A0A0;
@@ -25,13 +24,11 @@
             font-family: 'Montserrat', sans-serif;
             background-color: var(--bg-dark);
             color: var(--text-main);
-            line-height: 1.6;
         }
 
         h1, h2, h3 {
             font-family: 'Bodoni Moda', serif;
             text-transform: uppercase;
-            letter-spacing: 1px;
         }
 
         .container {
@@ -46,105 +43,71 @@
             background: rgba(0,0,0,0.95);
             padding: 20px 0;
             border-bottom: 1px solid #222;
-            z-index: 1000;
         }
 
         nav {
             display: flex;
             justify-content: space-between;
-            align-items: center;
         }
 
-        .logo {
-            color: var(--accent-gold);
-            font-size: 1.2rem;
-        }
+        .logo { color: var(--accent-gold); }
 
         .nav-links a {
-            margin-left: 20px;
+            margin-left: 15px;
             text-decoration: none;
             color: var(--text-dim);
-            font-size: 0.8rem;
-            font-weight: 600;
-            transition: 0.3s;
         }
 
-        .nav-links a:hover {
-            color: var(--accent-gold);
-        }
-
-        section {
-            padding: 80px 0;
-        }
+        section { padding: 80px 0; }
 
         .section-title {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             color: var(--accent-gold);
-            font-size: 2rem;
         }
 
         #hero {
             text-align: center;
-            padding: 120px 0 80px;
+            padding: 100px 0;
         }
 
         .hero-image {
             width: 180px;
-            height: 180px;
             border-radius: 50%;
-            border: 3px solid var(--accent-gold);
-            object-fit: cover;
-            margin-bottom: 20px;
+            border: 2px solid gold;
         }
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+            gap: 20px;
         }
 
         .card {
             background: var(--card-bg);
-            padding: 25px;
-            border-radius: 4px;
-            border: 1px solid #222;
-            transition: 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            border-color: var(--accent-gold);
+            padding: 20px;
         }
 
         .skill-tag {
             display: inline-block;
-            margin: 5px 3px;
-            padding: 6px 12px;
+            margin: 5px;
+            padding: 5px 10px;
             background: #222;
-            font-size: 0.75rem;
-            color: var(--accent-gold);
         }
 
         .btn {
             display: inline-block;
-            margin-top: 25px;
-            padding: 12px 30px;
-            border: 1px solid var(--accent-gold);
-            color: var(--accent-gold);
+            margin-top: 20px;
+            padding: 10px 25px;
+            border: 1px solid gold;
+            color: gold;
             text-decoration: none;
-            transition: 0.3s;
-        }
-
-        .btn:hover {
-            background: var(--accent-gold);
-            color: black;
         }
 
         footer {
             text-align: center;
-            padding: 30px;
-            color: var(--text-dim);
+            padding: 20px;
+            color: gray;
         }
     </style>
 </head>
@@ -154,7 +117,7 @@
 <header>
     <div class="container">
         <nav>
-            <h3 class="logo">SARAH O. ITYAV</h3>
+            <h3 class="logo">S.O ITYAV</h3>
             <div class="nav-links">
                 <a href="#about">Profile</a>
                 <a href="#skills">Skills</a>
@@ -168,23 +131,25 @@
 
 <section id="hero">
     <div class="container">
-        <img src="headshot.jpeg" alt="Sarah Ityav" class="hero-image">
+        <img src="headshot.jpeg" class="hero-image">
         <h1>Sarah Ogugua Ityav</h1>
-        <p style="color: var(--accent-gold); font-weight: 600;">
-            Aspiring Data Engineer • AI Tools Practitioner • Remote Operations Specialist
-        </p>
+        <p style="color: gold;">Aspiring Data Engineer • AI Tools Practitioner • Remote Operations Specialist</p>
     </div>
 </section>
 
 <section id="about">
     <div class="container">
         <h2 class="section-title">Profile</h2>
-        <p style="text-align:center; max-width:750px; margin:auto; color:var(--text-dim);">
-            I am an aspiring Data Engineer with hands-on experience working with Python, SQL, and data tools. 
-            Through my training at Olaham Academy, I have built practical projects including ETL pipelines and data organization systems.
+        <p style="text-align:center; max-width:700px; margin:auto; color:gray;">
+            I am an aspiring Data Engineer with hands-on experience in Python, SQL, and building simple ETL pipelines 
+            through my training with <strong>3MTT Nigeria</strong>. I have developed practical skills in data processing, 
+            database management, and automation.
             <br><br>
-            I also have a background in customer service and administrative support, which has strengthened my communication,
-            attention to detail, and ability to work effectively in remote environments.
+            In addition, I have gained experience in AI tools, digital productivity, and remote work systems through 
+            <strong>Olaham Academy and Consults</strong>, where I worked with tools such as Notion, Trello, Slack, Canva, and ChatGPT.
+            <br><br>
+            I also have a background in customer service and administrative support, which strengthens my attention to detail, 
+            communication, and ability to work effectively in remote environments.
             <br><br>
             I am currently open to entry-level remote roles in data support, virtual assistance, and digital operations.
         </p>
@@ -197,23 +162,23 @@
 
         <div class="grid">
             <div class="card">
-                <h3>Data & Tools</h3>
+                <h3>Data Engineering (3MTT Nigeria)</h3>
                 <span class="skill-tag">Python</span>
                 <span class="skill-tag">SQL</span>
                 <span class="skill-tag">PostgreSQL</span>
-                <span class="skill-tag">Excel</span>
+                <span class="skill-tag">ETL Pipelines</span>
             </div>
 
             <div class="card">
-                <h3>AI & Research</h3>
+                <h3>AI & Digital Tools (Olaham Academy)</h3>
                 <span class="skill-tag">ChatGPT</span>
                 <span class="skill-tag">Gemini</span>
                 <span class="skill-tag">NotebookLM</span>
-                <span class="skill-tag">Internet Research</span>
+                <span class="skill-tag">Canva</span>
             </div>
 
             <div class="card">
-                <h3>Remote Work</h3>
+                <h3>Remote Work Tools</h3>
                 <span class="skill-tag">Notion</span>
                 <span class="skill-tag">Trello</span>
                 <span class="skill-tag">Slack</span>
@@ -230,31 +195,23 @@
         <div class="grid">
             <div class="card">
                 <h3>Food Price ETL Pipeline</h3>
-                <p>
-                    Built a basic ETL pipeline using Python to collect and organize food price data into a structured format.
-                </p>
+                <p>Built a Python-based ETL pipeline to collect and organize food price data into a structured format.</p>
                 <a href="https://github.com/Sarahtancredi01/NGR_Food_Price_Pipeline" target="_blank">View Project</a>
             </div>
 
             <div class="card">
                 <h3>Notion Workspace</h3>
-                <p>
-                    Created a structured workspace for managing tasks and improving productivity.
-                </p>
+                <p>Designed a workspace to manage tasks and improve productivity.</p>
             </div>
 
             <div class="card">
                 <h3>Excel Data Project</h3>
-                <p>
-                    Performed data entry, cleaning, and organization using Excel and Google Sheets.
-                </p>
+                <p>Performed data cleaning and organization using Excel and Google Sheets.</p>
             </div>
 
             <div class="card">
                 <h3>Cold Outreach Emails</h3>
-                <p>
-                    Developed professional email templates for business communication.
-                </p>
+                <p>Created professional email templates for business communication.</p>
             </div>
         </div>
     </div>
@@ -290,7 +247,7 @@
         <p>Email: ityavsarah@gmail.com</p>
 
         <p>
-            <a href="https://linkedin.com/in/sarah-ityav-56417b57" target="_blank" style="color:var(--accent-gold);">
+            <a href="https://linkedin.com/in/sarah-ityav-56417b57" target="_blank" style="color:gold;">
                 View LinkedIn Profile
             </a>
         </p>
