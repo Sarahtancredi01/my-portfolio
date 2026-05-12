@@ -8,7 +8,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 
     <style>
-        html { scroll-behavior: smooth; }
+
+        html {
+            scroll-behavior: smooth;
+        }
 
         :root {
             --bg-dark: #0A0A0A;
@@ -18,21 +21,27 @@
             --text-dim: #A0A0A0;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         body {
             font-family: 'Montserrat', sans-serif;
             background-color: var(--bg-dark);
             color: var(--text-main);
+            line-height: 1.7;
         }
 
         h1, h2, h3 {
             font-family: 'Bodoni Moda', serif;
             text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .container {
-            max-width: 1100px;
+            max-width: 1150px;
             margin: auto;
             padding: 0 20px;
         }
@@ -43,72 +52,136 @@
             background: rgba(0,0,0,0.95);
             padding: 20px 0;
             border-bottom: 1px solid #222;
+            z-index: 1000;
         }
 
         nav {
             display: flex;
             justify-content: space-between;
+            align-items: center;
         }
 
-        .logo { color: var(--accent-gold); }
+        .logo {
+            color: var(--accent-gold);
+            font-size: 1.1rem;
+        }
 
         .nav-links a {
-            margin-left: 15px;
+            margin-left: 18px;
             text-decoration: none;
             color: var(--text-dim);
+            font-size: 0.9rem;
+            transition: 0.3s;
         }
 
-        section { padding: 80px 0; }
+        .nav-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        section {
+            padding: 80px 0;
+        }
 
         .section-title {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
             color: var(--accent-gold);
+            font-size: 2rem;
         }
 
         #hero {
             text-align: center;
-            padding: 100px 0;
+            padding: 120px 0 90px;
+            background: linear-gradient(to bottom, #111, #0A0A0A);
         }
 
         .hero-image {
-            width: 180px;
+            width: 190px;
+            height: 190px;
+            object-fit: cover;
             border-radius: 50%;
-            border: 2px solid gold;
+            border: 3px solid var(--accent-gold);
+            margin-bottom: 25px;
+        }
+
+        .hero-subtitle {
+            color: var(--accent-gold);
+            margin-top: 10px;
+            font-weight: 600;
+        }
+
+        .about-text {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+            color: var(--text-dim);
         }
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+            gap: 25px;
         }
 
         .card {
             background: var(--card-bg);
-            padding: 20px;
+            padding: 25px;
+            border: 1px solid #222;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            border-color: var(--accent-gold);
+            transform: translateY(-4px);
         }
 
         .skill-tag {
             display: inline-block;
             margin: 5px;
-            padding: 5px 10px;
+            padding: 6px 12px;
             background: #222;
+            border-radius: 3px;
+            font-size: 0.8rem;
+        }
+
+        .project-link {
+            display: inline-block;
+            margin-top: 15px;
+            color: var(--accent-gold);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .certificate-image {
+            width: 100%;
+            border-radius: 6px;
+            margin-top: 25px;
+            border: 2px solid #222;
         }
 
         .btn {
             display: inline-block;
             margin-top: 20px;
-            padding: 10px 25px;
-            border: 1px solid gold;
-            color: gold;
+            padding: 12px 28px;
+            border: 1px solid var(--accent-gold);
+            color: var(--accent-gold);
             text-decoration: none;
+            transition: 0.3s;
+            font-weight: 600;
+        }
+
+        .btn:hover {
+            background: var(--accent-gold);
+            color: black;
         }
 
         footer {
             text-align: center;
-            padding: 20px;
+            padding: 25px;
             color: gray;
+            border-top: 1px solid #222;
         }
+
     </style>
 </head>
 
@@ -118,10 +191,12 @@
     <div class="container">
         <nav>
             <h3 class="logo">S.O ITYAV</h3>
+
             <div class="nav-links">
                 <a href="#about">Profile</a>
                 <a href="#skills">Skills</a>
                 <a href="#projects">Projects</a>
+                <a href="#certificate">Certificate</a>
                 <a href="#experience">Experience</a>
                 <a href="#contact">Contact</a>
             </div>
@@ -131,130 +206,237 @@
 
 <section id="hero">
     <div class="container">
-        <img src="headshot.jpeg" class="hero-image">
+
+        <img src="headshot.jpeg" alt="Sarah Ogugua Ityav" class="hero-image">
+
         <h1>Sarah Ogugua Ityav</h1>
-        <p style="color: gold;">Aspiring Data Engineer • AI Tools Practitioner • Remote Operations Specialist</p>
+
+        <p class="hero-subtitle">
+            Aspiring Data Engineer • AI Tools Practitioner • Remote Operations Specialist
+        </p>
+
     </div>
 </section>
 
 <section id="about">
+
     <div class="container">
-        <h2 class="section-title">Profile</h2>
-        <p style="text-align:center; max-width:700px; margin:auto; color:gray;">
-            I am an aspiring Data Engineer with hands-on experience in Python, SQL, and building ETL pipelines 
-            through my training with <strong>3MTT Nigeria</strong>. I have worked on real-world data projects involving 
-            extraction, transformation, and structured storage of data.
+
+        <h2 class="section-title">Professional Profile</h2>
+
+        <p class="about-text">
+
+            I am an aspiring Data Engineer with practical experience in Python, SQL, PostgreSQL, 
+            and ETL pipeline development through my training with <strong>3MTT Nigeria</strong>. 
+            My technical projects focus on data extraction, transformation, and structured storage.
+
             <br><br>
-            I have also developed practical knowledge of AI tools and remote work systems through 
-            <strong>Olaham Academy and Consults</strong>, where I learned to use tools such as Notion, Trello, Slack, Canva, and ChatGPT.
+
+            I also completed the <strong>90-Days Digital Skills for Everyday Success (2.0)</strong> 
+            training program at <strong>Olaham Academy and Consults</strong>, where I developed 
+            hands-on knowledge in AI tools, remote work systems, digital productivity, 
+            online collaboration, internet research, and professional communication.
+
             <br><br>
-            I am currently open to entry-level roles in data support, virtual assistance, and remote operations.
+
+            I am currently open to entry-level opportunities in Data Support, 
+            Remote Operations, Administrative Support, and Digital Workspaces.
+
         </p>
+
     </div>
+
 </section>
 
 <section id="skills">
+
     <div class="container">
+
         <h2 class="section-title">Skills</h2>
 
         <div class="grid">
+
             <div class="card">
+
                 <h3>Data Engineering</h3>
+
                 <span class="skill-tag">Python</span>
                 <span class="skill-tag">SQL</span>
                 <span class="skill-tag">PostgreSQL</span>
                 <span class="skill-tag">ETL Pipelines</span>
+                <span class="skill-tag">Data Cleaning</span>
+
             </div>
 
             <div class="card">
+
                 <h3>AI & Digital Tools</h3>
+
                 <span class="skill-tag">ChatGPT</span>
                 <span class="skill-tag">Gemini</span>
                 <span class="skill-tag">NotebookLM</span>
                 <span class="skill-tag">Canva</span>
+                <span class="skill-tag">Gamma Slides</span>
+
             </div>
 
             <div class="card">
-                <h3>Remote Work & Productivity</h3>
+
+                <h3>Remote Productivity</h3>
+
                 <span class="skill-tag">Notion</span>
                 <span class="skill-tag">Trello</span>
                 <span class="skill-tag">Slack</span>
-                <span class="skill-tag">Excel & Google Sheets</span>
-                <span class="skill-tag">Time Management</span>
+                <span class="skill-tag">Google Workspace</span>
                 <span class="skill-tag">Professional Communication</span>
+
             </div>
+
         </div>
+
     </div>
+
 </section>
 
 <section id="projects">
+
     <div class="container">
+
         <h2 class="section-title">Projects</h2>
 
         <div class="grid">
 
             <div class="card">
+
                 <h3>Global Tech News Pipeline</h3>
+
                 <p>
-                    Developed a data pipeline that collects and organizes global technology news data into a structured format. 
-                    The project demonstrates data extraction, transformation, and preparation for analysis.
+                    Developed a pipeline that extracts and organizes global technology news into a structured format for analysis. 
+                    The project demonstrates data collection, transformation, and workflow organization using Python.
                 </p>
-                <a href="https://github.com/Sarahtancredi01/Global_Tech_News_Pipeline" target="_blank">View Project</a>
+
+                <a href="https://github.com/Sarahtancredi01/Global_Tech_News_Pipeline" target="_blank" class="project-link">
+                    View Project →
+                </a>
+
             </div>
 
             <div class="card">
-                <h3>Food Price ETL Pipeline</h3>
+
+                <h3>Automated NGR Food Price ETL Pipeline</h3>
+
                 <p>
-                    Built a Python-based ETL pipeline to collect and structure food price data for analysis.
+                    Built a Python-based ETL pipeline for processing and organizing Nigerian food price datasets into structured records.
                 </p>
-                <a href="https://github.com/Sarahtancredi01/NGR_Food_Price_Pipeline" target="_blank">View Project</a>
+
+                <a href="https://github.com/Sarahtancredi01/NGR_Food_Price_Pipeline" target="_blank" class="project-link">
+                    View Project →
+                </a>
+
             </div>
 
         </div>
+
     </div>
+
+</section>
+
+<section id="certificate">
+
+    <div class="container">
+
+        <h2 class="section-title">Certification</h2>
+
+        <div class="card">
+
+            <h3>Olaham Academy and Consults</h3>
+
+            <p style="margin-top: 15px; color: var(--text-dim);">
+
+                Successfully completed the <strong>90-Days Digital Skills for Everyday Success (2.0)</strong> training program.
+                The training covered AI tools, remote collaboration, productivity systems, online professionalism,
+                digital communication, internet research, and workplace readiness.
+
+            </p>
+
+            <p style="margin-top: 15px; color: var(--text-dim);">
+                <strong>Issued:</strong> May 9, 2026
+            </p>
+
+            <img src="Sarah Ogugua Ityav .png" alt="Certificate of Completion" class="certificate-image">
+
+        </div>
+
+    </div>
+
 </section>
 
 <section id="experience">
+
     <div class="container">
+
         <h2 class="section-title">Experience</h2>
 
         <div class="grid">
+
             <div class="card">
+
                 <h3>Financial Advisor</h3>
+
                 <p>First Bank Insurance</p>
+
             </div>
 
             <div class="card">
+
                 <h3>Executive Assistant</h3>
+
                 <p>British Council</p>
+
             </div>
 
             <div class="card">
+
                 <h3>Procurement Assistant</h3>
+
                 <p>NACA</p>
+
             </div>
+
         </div>
+
     </div>
+
 </section>
 
 <section id="contact">
+
     <div class="container" style="text-align:center;">
+
         <h2 class="section-title">Contact</h2>
 
         <p>Email: ityavsarah@gmail.com</p>
 
-        <p>
-            <a href="https://linkedin.com/in/sarah-ityav-56417b57" target="_blank" style="color:gold;">
+        <p style="margin-top: 10px;">
+
+            <a href="https://linkedin.com/in/sarah-ityav-56417b57" target="_blank" style="color: var(--accent-gold);">
                 View LinkedIn Profile
             </a>
+
         </p>
 
-        <a href="Sarah_CV.pdf" class="btn">Download CV</a>
+        <a href="Sarah_CV.pdf" class="btn">
+            Download CV
+        </a>
+
     </div>
+
 </section>
 
 <footer>
-    <p>© 2026 Sarah Ogugua Ityav</p>
+
+    <p>© 2026 Sarah Ogugua Ityav | Portfolio Website</p>
+
 </footer>
 
 </body>
